@@ -1,13 +1,13 @@
 {
-	"name": "personal-site",
-	"version": "0.0.0",
-	"private": true,
-	"scripts": {
-		"deploy": "wrangler deploy",
-		"dev": "wrangler dev",
-		"start": "wrangler dev"
-	},
-	"devDependencies": {
-		"wrangler": "^4.22.0"
-	}
+  "name": "personal-site",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler pages deploy",
+    "dev": "wrangler pages dev",
+    "start": "wrangler pages dev"
+  },
+  "devDependencies": {
+    "wrangler": "^4.22.0"
+  }
 }
