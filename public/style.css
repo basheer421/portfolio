@@ -38,17 +38,18 @@ body::after {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 8rem;
-  gap: 2rem;
+  padding: 2rem 12rem;
+  gap: 0.5rem;
 }
 
 .hero-content {
   flex: 1;
-  max-width: 580px;
+  max-width: 540px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
+  margin-left: 2rem;
 }
 
 .hero h1 {
@@ -94,7 +95,7 @@ body::after {
   align-items: center;
   position: relative;
   flex-direction: column;
-  margin-right: 2rem;
+  margin-right: 4rem;
   transform: scale(1.5);
 }
 
@@ -379,23 +380,56 @@ body::after {
   .hero {
     padding: 2rem 4rem;
   }
+
+  .hero-content {
+    margin-left: 1rem;
+  }
+
+  .loader {
+    margin-right: 2rem;
+    transform: scale(1.3);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 2rem;
+  }
+
+  .hero-content {
+    margin-left: 0;
+  }
+
+  .loader {
+    margin-right: 1rem;
+    transform: scale(1.2);
+  }
+
+  .projects {
+    padding-top: 2.5rem;
+  }
+
+  .project-cards {
+    gap: 1.2rem;
+  }
 }
 
 @media (max-width: 768px) {
   .hero {
-    flex-direction: column;
-    padding: 2rem;
+    flex-direction: column-reverse;
+    padding: 3rem 2rem;
     gap: 3rem;
-    text-align: center;
+    justify-content: center;
   }
 
   .hero-content {
     align-items: center;
     text-align: center;
+    margin: 0;
   }
 
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     text-align: center;
   }
 
@@ -404,57 +438,45 @@ body::after {
   }
 
   .hero p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     text-align: center;
   }
 
   .loader {
-    width: 8rem;
-    height: 8rem;
-    margin-right: 0;
-  }
-
-  .blackhole {
-    width: 8rem;
-    height: 8rem;
-  }
-
-  .blackhole-circle::before {
-    width: 4rem;
-    height: 4rem;
-    top: 5rem;
-  }
-
-  .blackhole-disc {
-    width: 5rem;
-    height: 10rem;
-  }
-
-  .blackhole-disc::before {
-    width: 5rem;
-    height: 10rem;
-  }
-}
-
-@media (max-width: 900px) {
-  .projects {
-    padding-top: 2.5rem;
-  }
-  .project-cards {
-    gap: 1.2rem;
+    margin: 0;
+    transform: scale(1.1);
   }
 }
 
 @media (max-width: 600px) {
+  .hero {
+    padding: 2rem 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .loader {
+    transform: scale(1);
+  }
+
   .projects {
     padding-top: 1.5rem;
   }
+
   .projects-title {
     font-size: 1.3rem;
   }
+
   .project-image {
     height: 110px;
   }
+
   .project-content {
     padding: 1rem 0.7rem 0.8rem 0.7rem;
   }
