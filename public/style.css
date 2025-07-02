@@ -139,11 +139,13 @@ body::after {
   align-items: flex-start;
   text-align: left;
   margin-left: 2rem;
+  padding-bottom: 0;
+  height: fit-content;
+  max-height: fit-content;
 }
 
 .hero h1 {
   font-size: 4.5rem;
-  margin-bottom: 0.5rem;
   font-weight: 600;
   letter-spacing: -0.02em;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -158,7 +160,6 @@ body::after {
 .hero h2 {
   font-size: 1.8rem;
   color: #ffffff;
-  margin-bottom: 1.5rem;
   font-weight: 500;
   letter-spacing: -0.01em;
   opacity: 0.9;
@@ -168,7 +169,6 @@ body::after {
   font-size: 1.25rem;
   max-width: 540px;
   line-height: 1.7;
-  margin: 0;
   color: #a1a1aa;
   font-weight: 400;
   letter-spacing: -0.01em;
@@ -184,8 +184,8 @@ body::after {
   align-items: center;
   position: relative;
   flex-direction: column;
-  margin-right: 4rem;
   transform: scale(1.5);
+  padding-right: 4rem; /* Move right on desktop */
 }
 
 .curve {
@@ -354,7 +354,6 @@ body::after {
   color: #ffffff;
   font-size: 2rem;
   font-weight: 500;
-  margin-bottom: 3.5rem;
   letter-spacing: -0.02em;
 }
 
@@ -434,14 +433,12 @@ body::after {
   color: #ffffff;
   font-size: 1.5rem;
   font-weight: 500;
-  margin-bottom: 1rem;
   letter-spacing: -0.02em;
 }
 
 .project-tags {
   display: flex;
   gap: 0.5rem;
-  margin-bottom: 1.25rem;
   flex-wrap: wrap;
 }
 
@@ -459,14 +456,12 @@ body::after {
   color: #a1a1aa;
   font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 1.5rem;
   max-width: 640px;
 }
 
 .project-links {
   display: flex;
   gap: 1rem;
-  margin-top: auto;
   position: relative;
   z-index: 2;
 }
@@ -512,7 +507,6 @@ body::after {
 
   .projects-title {
     font-size: 1.75rem;
-    margin-bottom: 2.5rem;
   }
 
   .project-card {
@@ -521,6 +515,9 @@ body::after {
 
   .project-content h3 {
     font-size: 1.25rem;
+  }
+  .blackhole {
+    padding-left: 0; /* Remove the right shift on mobile */
   }
 }
 
@@ -535,8 +532,8 @@ body::after {
   }
 
   .loader {
-    margin-right: 2rem;
     transform: scale(1.3);
+    padding-right: 0;
   }
 }
 
@@ -550,7 +547,6 @@ body::after {
   }
 
   .loader {
-    margin-right: 1rem;
     transform: scale(1.2);
   }
 
@@ -566,7 +562,7 @@ body::after {
 @media (max-width: 768px) {
   .hero {
     flex-direction: column-reverse;
-    padding: 3rem 2rem;
+    padding: 8rem 2rem;
     gap: 3rem;
     justify-content: center;
   }
@@ -574,7 +570,6 @@ body::after {
   .hero-content {
     align-items: center;
     text-align: center;
-    margin: 0;
   }
 
   .hero h1 {
@@ -592,14 +587,15 @@ body::after {
   }
 
   .loader {
-    margin: 0;
     transform: scale(1.1);
+    padding-left: 0; /* Remove the right shift on mobile */
   }
 }
 
 @media (max-width: 600px) {
   .hero {
     padding: 2rem 1.5rem;
+    padding-top: 8rem;
   }
 
   .hero h1 {
