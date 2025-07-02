@@ -132,7 +132,6 @@ body::after {
 }
 
 .hero-content {
-  flex: 1;
   max-width: 540px;
   display: flex;
   flex-direction: column;
@@ -347,6 +346,7 @@ body::after {
   max-width: 1200px;
   margin: 0 auto;
   padding: 8rem 1.5rem 4rem;
+  padding-top: 0;
   position: relative;
   z-index: 2;
 }
@@ -613,7 +613,6 @@ body::after {
 @media (max-width: 600px) {
   .hero {
     padding: 2rem 1.5rem;
-    padding-top: 8rem;
   }
 
   .hero h1 {
