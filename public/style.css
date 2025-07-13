@@ -540,15 +540,15 @@ body::after {
 
 .achievements-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
   justify-items: center;
   padding: 1rem;
 }
 
 .outer {
-  width: 280px;
-  height: 230px;
+  width: 220px;
+  height: 180px;
   border-radius: 10px;
   padding: 1px;
   background: radial-gradient(
@@ -644,7 +644,7 @@ body::after {
 
 .card .text {
   font-weight: 700;
-  font-size: 3.5rem;
+  font-size: 2.8rem;
   background: linear-gradient(
     45deg,
     rgba(0, 0, 0, 0.7) 4%,
@@ -654,7 +654,7 @@ body::after {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
 .line {
@@ -687,6 +687,18 @@ body::after {
 }
 
 /* Media queries for achievements */
+@media (max-width: 1200px) {
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .outer {
+    width: 240px;
+    height: 190px;
+  }
+}
+
 @media (max-width: 768px) {
   .achievements {
     padding: 3rem 1rem;
@@ -697,13 +709,30 @@ body::after {
     margin-bottom: 2rem;
   }
 
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
   .outer {
-    width: 260px;
-    height: 210px;
+    width: 200px;
+    height: 160px;
   }
 
   .card .text {
-    font-size: 3rem;
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .achievements-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .outer {
+    width: 240px;
+    height: 180px;
   }
 }
 
