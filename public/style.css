@@ -518,6 +518,45 @@ body::after {
   cursor: not-allowed;
 }
 
+/* Currently Status */
+.currently {
+  font-size: 0.95rem;
+  color: #71717a;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.currently-label {
+  color: #22c55e;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Skills Strip */
+.skills-strip {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.skills-strip p {
+  color: #71717a;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+  .skills-strip p {
+    font-size: 0.9rem;
+  }
+}
+
 /* Achievements Section */
 .achievements {
   width: 100%;
@@ -539,10 +578,10 @@ body::after {
 }
 
 .achievements-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: center;
   padding: 1rem;
 }
 
@@ -612,6 +651,7 @@ body::after {
   flex-direction: column;
   color: rgba(255, 255, 255, 0.9);
   overflow: hidden;
+  text-align: center;
 }
 
 .ray {
@@ -688,11 +728,6 @@ body::after {
 
 /* Media queries for achievements */
 @media (max-width: 1200px) {
-  .achievements-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-
   .outer {
     width: 240px;
     height: 190px;
@@ -710,8 +745,7 @@ body::after {
   }
 
   .achievements-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 2rem;
   }
 
   .outer {
@@ -747,8 +781,7 @@ body::after {
 
 @media (max-width: 480px) {
   .achievements-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 3rem;
   }
 
   .outer {
